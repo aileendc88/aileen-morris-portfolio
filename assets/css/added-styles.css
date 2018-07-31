@@ -1,0 +1,133 @@
+/* Centers Project Images */
+.center-project-photos {
+  display: inline-flex;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column; 
+}
+
+/* Shows Full Project Image */
+.project[data-position] img {
+  width: 100%;
+}
+
+.project:hover, .project:focus {
+  transform: scale(1.25);
+  transition: all .2s linear;
+}
+
+.project-container {
+  overflow: hidden;
+}
+
+/* Tint and Hover Animation */
+.tint {
+  position: relative;
+  float: left;
+  cursor: pointer;
+}
+
+.tint:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all .3s linear;
+}
+
+.tint { 
+  background: none; 
+}
+
+/* Change Color of Each Background */
+.t1:hover:before { 
+  background: #616161;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #9bc5c3, #616161);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #9bc5c3, #616161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+.t2:hover:before { 
+  background: #D66D75;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E29587, #D66D75);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E29587, #D66D75); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+.t3:hover:before { 
+  background: #BE93C5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+
+/* For Text ontop of images */
+img {
+  z-index: 2;
+}
+
+.img-text-container, .gallery .image {
+  display: flex;
+  justify-content: center;
+}
+
+.img-text {
+  z-index: 9999;
+  position: absolute;
+  display: none;
+  align-self: center;
+  padding: 100px;
+  font-size: medium;
+}
+
+.about-me__img-one:hover .img-text {
+  display: inline-block;
+}
+
+.hover-display {
+  display: inline;
+}
+
+.hover-display-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .t1 { 
+    background: #616161;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #9bc5c3, #616161);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #9bc5c3, #616161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+  
+  .t2 { 
+    background: #D66D75;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E29587, #D66D75);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E29587, #D66D75); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+  
+  .t3 { 
+    background: #BE93C5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+  }
+
+  .img-text {
+    display: inline-block;
+  }
+
+  .mobile-image-filter {
+    background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25)), linear-gradient(0deg, rgba(0, 0, 0, 0.125), rgba(0, 0, 0, 0.125));
+    background-size: 128px 128px, auto, auto;
+    filter: brightness(35%);
+  }
+
+  .hover-display {
+    display: none !important;
+  }
+
+  .hover-display-mobile {
+    display: inline;
+  }
+}
